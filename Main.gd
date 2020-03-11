@@ -43,3 +43,7 @@ func _on_ScoreTimer_timeout():
 func _on_StartTimer_timeout():
 	$MobTimer.start()
 	$ScoreTimer.start()
+
+
+func _on_Player_hit():
+	pass # Replace with function body.

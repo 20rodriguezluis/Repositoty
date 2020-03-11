@@ -1,13 +1,13 @@
 extends RigidBody2D
 
-#warning-ignore-all:unused_class_variable
-export var min_speed = 150
-export var max_speed = 250
-var mob_types = ["walk", "swim", "fly"]
+export var min_speed = 150  # Minimum speed range.
+export var max_speed = 250  # Maximum speed range.
+var mob_types = ["walk", "swim", "fly"]# Declare member variables here. Examples:
 
+
+# Called when the node enters the scene tree for the first time.
 func _ready():
 	$AnimatedSprite.animation = mob_types[randi() % mob_types.size()]
 
-
-func _on_VisibilityNotifier2D_screen_exited():
+func _on_Visibility_screen_exited():
 	queue_free()
